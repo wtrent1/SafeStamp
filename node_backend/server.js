@@ -16,8 +16,8 @@ app.get('/', function (req, res) {
 
 // TODO: Set the keys
 // You could probably pull these using the dotenv package and process.env
-const MAILJET_PUBLIC_KEY = '53cbac17c56ed2ed3ba17588207e8016';
-const MAILJET_PRIVATE_KEY = '982a6a9df69a31c52a952af8e79b07df';
+const MAILJET_PUBLIC_KEY = 'xxx';
+const MAILJET_PRIVATE_KEY = 'xxx';
 
 // POST endpoint for sending email
 app.post('/api/email', function (req, res) {
