@@ -1,0 +1,30 @@
+#topHero {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/headerPharmaPic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1.title.has-text-white {
+  font-size: xx-large;
+  font-weight: 900;
+}
+.image {
+  position: static;
+}
+.salesTitle, .wrongTitle, .numbersTitle {
+  font-weight: 900;
+  font-size: xx-large;
+}
+.salesText, .wrongText, .numbersText {
+  font-weight: 800;
+  font-size: x-large;
+}
+article {
+  background-color: white;
+}
+.hero {
+  background-color: #12a89d;
+}
+.hero h2 {
+  font-weight: 400;
+  font-size: x-large;
+}

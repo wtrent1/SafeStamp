@@ -1,0 +1,32 @@
+#topHero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/QD.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 3px;
+}
+h1.title.has-text-white {
+    font-size: 2.9rem;
+}
+h2.subtitle.has-text-white {
+    font-size: 2.4rem;
+}
+a.button.is-rounded {
+    background: #49a59d;
+}
+h1.about.has-text-weight-bold, 
+  .why.has-text-weight-bold {
+    font-size: x-large;
+    }
+  .tech.has-text-weight-bold,
+  .design.has-text-weight-bold,
+  .brand.has-text-weight-bold,
+  .honors.has-text-weight-bold {
+    font-size: large;
+    }
+#propHero {
+    background-color: #49a59d;
+
+}
+#propTitle, #propSub {
+    text-shadow: 1.5px 1.5px gray;
+}

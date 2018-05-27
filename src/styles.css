@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Aspira-DEMO';
+  src: url('./assets/Aspira-DEMO-webfont.woff2') format('woff2'), url('./assets/Aspira-DEMO-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html * {
+  font-family: Aspira-DEMO, Arial, sans-serif;
+}

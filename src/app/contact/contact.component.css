@@ -1,0 +1,21 @@
+#topHero {
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/howPageLab.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.investment {
+  margin-top: -11em;
+  background-color: white;
+  border-top: 10px solid #12a89d;
+}
+h1.title {
+  color: #12a89d;
+}
+
+.subText {
+  font-size: large;
+  font-weight: 400;
+}
+.founder {
+  font-size: x-large;
+}

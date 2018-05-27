@@ -1,0 +1,71 @@
+nav.navbar.is-transparent {
+  height: 4rem !important;
+}
+
+.navbar-item img {
+  max-height: 3.40rem;
+}
+
+.navbar-start {
+  margin: 0;
+  opacity: .65 !important;
+}
+
+.navbar-item {
+  margin-right: 10em;
+}
+
+@media (min-width: 1200px) {
+  #navLink {
+    background-image: url(../assets/silica.png);
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+  }
+}
+
+/*Hide in Other Small Devices */
+
+/* Landscape tablets and medium desktops */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #navLink {
+    background-image: none;
+  }
+}
+
+/* Portrait tablets and small desktops */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #navLink {
+    background-image: none;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+
+@media (max-width: 767px) {
+  #navLink {
+    background-image: none;
+  }
+}
+
+/* Portrait phones and smaller */
+
+@media (max-width: 480px) {
+  #navLink {
+    background-image: none;
+  }
+}
+
+.linkText {
+  color: black;
+  font-size: x-large;
+  font-weight: 900;
+  text-shadow: 2px 2px white;
+}
+
+footer.footer {
+  background-color: white;
+  padding: 0rem 1.5rem 1rem;
+}

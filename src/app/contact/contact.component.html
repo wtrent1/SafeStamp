@@ -1,0 +1,79 @@
+<section id=topHero class="hero is-large is-fluid">
+  <div class="hero-body">
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="investment has-text-centered">
+      <br>
+      <br>
+      <h1 class="title">
+        INVESTMENT OPPORTUNITIES
+      </h1>
+      <br>
+      <h3 class="subText">
+        In order to finish development and facilitate rapid expansion, we are pivoting from self-financing to an angel-backed and
+        venture-backed model. Multiple tiers are available, and both debt and equity considerations are negotiable. Investors
+        should be informed that, in addition to the large size of projected revenues, high potential marginal profits make
+        SafeStamp™ an appealing investment.
+      </h3>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="columns">
+    <div class="column is-3">
+      <h1 class="title" id="contact">
+        Contact Us
+      </h1>
+      <h3 class="founder">Founder and CEO</h3>
+      <h4>Matt McGuire</h4>
+      <h4>+ 1.865.518.2469</h4>
+      <h4>matt@safestamp.com</h4>
+    </div>
+    <div class="column is-6 is-offset-1">
+      <div class="field">
+        <div class="control">
+          <label class="label">Affiliation</label>
+          <div class="select">
+            <select name="drop" #drop>
+              <option></option>
+              <option value="Individual">Individual</option>
+              <option value="Institutional">Institutional</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" name="name" #name>
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input class="input" type="email" name="email" #email>
+              </div>
+              <div class="field">
+                <label class="label">Phone Number</label>
+                <div class="control">
+                  <input class="input" type="phone" name="phone" #phone>
+                </div>
+                <div class="field">
+                  <label class="label">Message</label>
+                  <div class="control">
+                    <textarea class="textarea" name="message" #message></textarea>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <button class="button is-link" type="button" (click)="onSubmit(drop.value, name.value, email.value, phone.value, message.value)">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
