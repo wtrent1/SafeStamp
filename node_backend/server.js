@@ -2,12 +2,19 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const Mailjet = require('node-mailjet');
+const cors = require('cors');
 
 const app = express();
 app.use(express.static(__dirname));
 
 app.use(bodyParser.json()); // support json encoded bodies
-// app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+var corsOptions = {
+  origin: 'http://localhost:4200',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
+app.options('*', cors(corsOptions));
 
 // the "index" route, which serves the Angular app
 app.get('/', function (req, res) {
@@ -20,7 +27,7 @@ const MAILJET_PUBLIC_KEY = 'xxx';
 const MAILJET_PRIVATE_KEY = 'xxx';
 
 // POST endpoint for sending email
-app.post('/api/email', function (req, res) {
+app.post('/api/email', cors(corsOptions), function (req, res) {
   // TODO: get message from req.body
   const request = Mailjet
     .connect(MAILJET_PUBLIC_KEY, MAILJET_PRIVATE_KEY)
@@ -34,18 +41,16 @@ app.post('/api/email', function (req, res) {
       "Recipients": [{
         "Email": "passenger@mailjet.com"
       }]
-    });
-  request
-    .on('success', function (response, body) {
-      console.log(response.statusCode, body);
-      // @cmckni3 Added this so the node server actually sends a JSON response back
+    })
+    .then(response => {
       res.json({
         success: true,
         error: null
       });
     })
-    .on('error', function (err, response) {
-      console.log(response.statusCode, err);
+    .catch(err => {
+      // TODO: Look into log4js
+      console.error(err.ErrorMessage);
       // TODO: Respond with some error in JSON and set a 500 status
       res.status(500);
       res.json({
