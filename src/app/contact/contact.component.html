@@ -22,7 +22,7 @@
 </section>
 <section class="section">
   <div class="columns">
-    <div class="column is-3">
+    <div class="column is-3 has-text-centered">
       <h1 class="title" id="contact">
         Contact Us
       </h1>
@@ -31,7 +31,15 @@
       <h4>+ 1.865.518.2469</h4>
       <h4>matt@safestamp.com</h4>
     </div>
-    <div class="column is-6 is-offset-1">
+    <div id="contInst" class="column is-3 is-offset-1">
+      <span>Enter your information,
+        <br> click the Submit button,
+        <br> and our CEO will be in touch shortly.</span>
+      <br>
+      <br>
+      <span>Thanks for reaching out!</span>
+    </div>
+    <div id="myForm" class="column is-3 is-offset-1">
       <div class="field">
         <div class="control">
           <label class="label">Affiliation</label>
@@ -44,10 +52,21 @@
             </select>
           </div>
         </div>
+        <div class="control">
+          <label class="label">Information Requested</label>
+          <div class="select">
+            <select name="drop2" #drop2>
+              <option></option>
+              <option value="Quote">Quote</option>
+              <option value="Proposal">Proposal</option>
+              <option value="Investment Information">Investment Information</option>
+            </select>
+          </div>
+        </div>
         <div class="field">
           <label class="label">Name</label>
           <div class="control">
-            <input class="input" type="text" name="name" #name>
+            <input id="input" class="input" type="text" name="name" #name>
             <div class="field">
               <label class="label">Email</label>
               <div class="control">
@@ -59,14 +78,21 @@
                   <input class="input" type="phone" name="phone" #phone>
                 </div>
                 <div class="field">
-                  <label class="label">Message</label>
-                  <div class="control">
-                    <textarea class="textarea" name="message" #message></textarea>
-                  </div>
+                  <p class="control is-expanded">
+                    <label class="label">How Did You Hear About Us?</label>
+                    <div class="select">
+                      <select name="drop3" #drop3>
+                        <option></option>
+                        <option value="Professional Contact">Professional Contact</option>
+                        <option value="Social Contact">Social Contact</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
                 </div>
                 <div class="field">
                   <div class="control">
-                    <button class="button is-link" type="button" (click)="onSubmit(drop.value, name.value, email.value, phone.value, message.value)">Submit</button>
+                    <button class="button is-link" type="button" (click)="onSubmit(drop.value, drop2.value, name.value, email.value, phone.value, drop3.value)">Submit</button>
                   </div>
                 </div>
               </div>

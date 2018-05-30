@@ -7,8 +7,11 @@ nav.navbar.is-transparent {
 }
 
 .navbar-start {
-  margin: 0;
+  margin-left: 11rem;
   opacity: .65 !important;
+}
+.navbar-end {
+  margin-left: 2rem;
 }
 
 .navbar-item {

@@ -17,8 +17,8 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(drop, name, email, phone, message) {
-    const emailBody = {drop, name, email, phone, message};
+  onSubmit(drop, drop2, name, email, phone, drop3) {
+    const emailBody = {drop, drop2, name, email, phone, drop3};
     console.log(emailBody);
     this.emailService.sendEmail(emailBody).subscribe(
       // error => {

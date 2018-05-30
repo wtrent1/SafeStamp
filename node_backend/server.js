@@ -12,7 +12,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 var corsOptions = {
   origin: 'http://localhost:4200',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
+};
 
 app.options('*', cors(corsOptions));
 
@@ -23,8 +23,8 @@ app.get('/', function (req, res) {
 
 // TODO: Set the keys
 // You could probably pull these using the dotenv package and process.env
-const MAILJET_PUBLIC_KEY = 'xxx';
-const MAILJET_PRIVATE_KEY = 'xxx';
+const MAILJET_PUBLIC_KEY = '53cbac17c56ed2ed3ba17588207e8016';
+const MAILJET_PRIVATE_KEY = '982a6a9df69a31c52a952af8e79b07df';
 
 // POST endpoint for sending email
 app.post('/api/email', cors(corsOptions), function (req, res) {
@@ -33,13 +33,13 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
     .connect(MAILJET_PUBLIC_KEY, MAILJET_PRIVATE_KEY)
     .post("send")
     .request({
-      "FromEmail": "pilot@mailjet.com",
-      "FromName": "Mailjet Pilot",
-      "Subject": "Your email flight plan!",
-      "Text-part": "Dear passenger, welcome to Mailjet! May the delivery force be with you!",
-      "Html-part": "<h3>Dear passenger, welcome to Mailjet!</h3><br />May the delivery force be with you!",
+      "FromEmail": "Matt@SafeStamp.com",
+      "FromName": "Matt McGuire",
+      "Subject": "Thank You For Contacting SafeStamp™!",
+      "Text-part": "Thanks so much for reaching out, " + req.body.name + ". I'll be contacting you as soon as I can regarding your " + req.body.drop2 + " request.",
       "Recipients": [{
-        "Email": "passenger@mailjet.com"
+        "Email": req.body.email,
+        "Bcc": "matt@safestamp.com"
       }]
     })
     .then(response => {
@@ -59,6 +59,7 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
       });
     });
 });
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
