@@ -5,8 +5,21 @@ const Mailjet = require('node-mailjet');
 const cors = require('cors');
 const dotenv = require('dotenv').config();
 
+// const forceSSL = function() {
+//   return function (req, res, next) {
+//     if (req.headers['x-forward-proto'] !== 'https') {
+//       return res.redirect(
+//         ['https://', req.get('Host'), req.url].join('')
+//       );
+//     }
+//     next();
+//   };
+// };
+// app.use(forceSSL());
+
 const app = express();
-app.use(express.static(__dirname));
+
+app.use(express.static(__dirname + '/dist'));
 
 app.use(bodyParser.json()); // support json encoded bodies
 
@@ -69,8 +82,6 @@ app.use(function (req, res, next) {
 });
 
 // HTTP listener
-app.listen(3000, function () {
-  console.log('Example listening on port 3000!');
-});
+app.listen(process.env.PORT || 8080);
 
 module.exports = app;
