@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const Mailjet = require('node-mailjet');
 const cors = require('cors');
+const dotenv = require('dotenv').config();
 
 const app = express();
 app.use(express.static(__dirname));
@@ -23,14 +24,13 @@ app.get('/', function (req, res) {
 
 // TODO: Set the keys
 // You could probably pull these using the dotenv package and process.env
-const MAILJET_PUBLIC_KEY = '53cbac17c56ed2ed3ba17588207e8016';
-const MAILJET_PRIVATE_KEY = '982a6a9df69a31c52a952af8e79b07df';
+
 
 // POST endpoint for sending email
 app.post('/api/email', cors(corsOptions), function (req, res) {
   // TODO: get message from req.body
   const request = Mailjet
-    .connect(MAILJET_PUBLIC_KEY, MAILJET_PRIVATE_KEY)
+    .connect(process.env.MAILJET_PUBLIC_KEY, process.env.MAILJET_PRIVATE_KEY)
     .post("send")
     .request({
       "FromEmail": "Matt@SafeStamp.com",
