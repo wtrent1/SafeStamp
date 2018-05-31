@@ -1,18 +1,26 @@
 {
   "name": "safe-stamp-final",
   "version": "0.0.0",
+  "main": "/node_backend/server.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod"
+  },
+  "engines": {
+    "node": "~8.11.1",
+    "npm": "~6.0.1"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.0",
+    "@angular/cli": "~6.0.0",
     "@angular/common": "^6.0.0",
+    "@angular/compiler-cli": "^6.0.0",
     "@angular/compiler": "^6.0.0",
     "@angular/core": "^6.0.0",
     "@angular/forms": "^6.0.0",
@@ -30,8 +38,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.0",
-    "@angular/cli": "~6.0.0",
-    "@angular/compiler-cli": "^6.0.0",
     "@angular/language-service": "^6.0.0",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
