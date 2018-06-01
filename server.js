@@ -32,14 +32,8 @@ app.options('*', cors(corsOptions));
 
 // the "index" route, which serves the Angular app
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '/dist/index.html'));
+  res.sendFile(path.join(__dirname, '/dist/SafeStamp-Final/index.html'));
 });
-
-// TODO: Set the keys
-// You could probably pull these using the dotenv package and process.env
-
-const MAILJET_PUBLIC_KEY = 'xxx';
-const MAILJET_PRIVATE_KEY = 'xxx';
 
 // POST endpoint for sending email
 app.post('/api/email', cors(corsOptions), function (req, res) {
