@@ -19,7 +19,7 @@ const dotenv = require('dotenv').config();
 
 const app = express();
 
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist/SafeStamp-Final'));
 
 app.use(bodyParser.json()); // support json encoded bodies
 
