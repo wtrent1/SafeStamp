@@ -31,7 +31,7 @@ var corsOptions = {
 app.options('*', cors(corsOptions));
 
 // the "index" route, which serves the Angular app
-app.get('/', function (req, res) {
+app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, '/dist/SafeStamp-Final/index.html'));
 });
 
