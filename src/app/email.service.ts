@@ -17,6 +17,6 @@ export class EmailService {
   // @cmckni3 Removed httpOptions as well since HttpClient sets that as the default
   // Content-Type and sends JSON by default
   sendEmail(emailBody) {
-    return this.http.post('http://localhost:3000/api/email', emailBody);
+    return this.http.post('http://mysterious-ravine-18122.herokuapp.com/api/email', emailBody);
   }
 }

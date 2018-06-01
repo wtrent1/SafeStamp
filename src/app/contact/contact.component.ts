@@ -27,6 +27,7 @@ export class ContactComponent implements OnInit {
       // })
       success => {
         console.log(success);
+        alert('Email Sent!');
       });
   }
 }
