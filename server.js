@@ -39,7 +39,7 @@ app.get('/*', function (req, res) {
 app.post('/api/email', cors(corsOptions), function (req, res) {
   // TODO: get message from req.body
   const request = Mailjet
-    .connect(process.env.MAILJET_PUBLIC_KEY, process.env.MAILJET_PRIVATE_KEY)
+    .connect(process.env.PUBLIC_KEY, process.env.PRIVATE_KEY)
     .post("send")
     .request({
       "FromEmail": "Matt@SafeStamp.com",
