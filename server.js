@@ -48,7 +48,8 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
       "Text-part": "Thanks so much for reaching out, " + req.body.name + ". I'll be contacting you as soon as I can regarding your " + req.body.drop2 + " request.",
       "Recipients": [{
         "Email": req.body.email,
-        "Bcc": "matt@safestamp.com"
+        "Bcc": "matt@safestamp.com",
+        "Bcc": "jl@johnlea.design"
       }]
     })
     .then(response => {
