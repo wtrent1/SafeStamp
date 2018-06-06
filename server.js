@@ -4,6 +4,8 @@ const path = require('path');
 const Mailjet = require('node-mailjet');
 const cors = require('cors');
 const dotenv = require('dotenv').config();
+const logger = require('heroku-logger');
+
 
 // const forceSSL = function() {
 //   return function (req, res, next) {
@@ -66,7 +68,7 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
     })
     .catch(err => {
       // TODO: Look into log4js
-      console.error(err.ErrorMessage);
+      logger.error(err.ErrorMessage);
       // TODO: Respond with some error in JSON and set a 500 status
       res.status(500);
       res.json({
