@@ -39,36 +39,25 @@ app.get('/', function (req, res) {
 app.post('/api/email', cors(corsOptions), function (req, res) {
   // TODO: get message from req.body
   const request = Mailjet
-    .connect(process.env.PUBLIC_KEY, process.env.PRIVATE_KEY, {version: 'v3.1'})
+    .connect(process.env.PUBLIC_KEY, process.env.PRIVATE_KEY)
     .post("send")
     .request({
-      "Messages":[
-        {
-          "From": {
-                  "Email": "Matt@SafeStamp.com",
-                  "Name": "Matt McGuire"
-          },
-          "To": [ 
-                  {
-                    "Email": req.body.email,
-                    "Name": req.body.name
-                  }
-          ],
-          "Bcc": [
-                  {
-                    "Email": "Matt@SafeStamp.com",
-                    "Name": "Matt McGuire"
-                  },
-                  {
-                    "Email": "jl@johnlea.design",
-                    "Name": "John Lea"
-                  }
-          ],
-          "Subject": "Thank You For Contacting SafeStamp™!",
-          "Text-part": "Thanks so much for reaching out, " + req.body.name + ". I'll be contacting you as soon as I can regarding your " + req.body.drop2 + " request."
-        }
-      ]
-    })
+      "FromEmail": "Matt@SafeStamp.com",
+      "FromName": "Matt McGuire",
+      "Subject": "Thank You For Contacting SafeStamp™!",
+      "Text-part": "Thanks so much for reaching out, " + req.body.name + ". I'll be contacting you as soon as I can regarding your " + req.body.drop2 + " request.",
+      "To": {
+        "Email": req.body.email,
+        "Name": req.body.name
+      },
+      "Bcc": [{
+        "Email": "Matt@SafeStamp.com",
+        "Name": "Matt McGuire"
+      }, {
+        "Email": "jl@johnlea.design",
+        "Name": "John Lea"
+      }]
+      })
     .then(response => {
       res.json({
         success: true,
