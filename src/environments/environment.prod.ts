@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  edgeUrl: 'https://mysterious-ravine-18122.herokuapp.com'
 };

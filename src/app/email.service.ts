@@ -3,6 +3,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class EmailService {
@@ -17,6 +18,6 @@ export class EmailService {
   // @cmckni3 Removed httpOptions as well since HttpClient sets that as the default
   // Content-Type and sends JSON by default
   sendEmail(emailBody) {
-    return this.http.post('https://mysterious-ravine-18122.herokuapp.com/api/email', emailBody);
+    return this.http.post(`${environment.edgeUrl}/api/email`, emailBody);
   }
 }
