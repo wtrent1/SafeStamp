@@ -39,8 +39,8 @@ app.get('/', function (req, res) {
 app.post('/api/email', cors(corsOptions), function (req, res) {
   // TODO: get message from req.body
   const request = Mailjet
-    .connect(process.env.PUBLIC_KEY, process.env.PRIVATE_KEY)
-    .post("send", {'version': 'v3.1'})
+    .connect(process.env.PUBLIC_KEY, process.env.PRIVATE_KEY, {version: 'v3.1'})
+    .post("send")
     .request({
       "Messages":[
         {

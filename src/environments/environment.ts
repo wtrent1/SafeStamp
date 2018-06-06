@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  edgeUrl: 'http://localhost:4200'
+  edgeUrl: 'http://localhost:3000'
 };
 
 /*
