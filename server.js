@@ -48,17 +48,8 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
       "FromName": "Matt McGuire",
       "Subject": "Thank You For Contacting SafeStamp™!",
       "Text-part": "Thanks so much for reaching out, " + req.body.name + ". I'll be contacting you as soon as I can regarding your " + req.body.drop2 + " request.",
-      "To": {
-        "Email": req.body.email,
-        "Name": req.body.name
-      },
-      "Bcc": [{
-        "Email": "Matt@SafeStamp.com",
-        "Name": "Matt McGuire"
-      }, {
-        "Email": "jl@johnlea.design",
-        "Name": "John Lea"
-      }]
+      "To": req.body.email,
+      "Bcc": "<jl@johnlea.design>"
       })
     .then(response => {
       res.json({
