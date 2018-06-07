@@ -48,9 +48,9 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
       "FromName": "Matt McGuire",
       "To": req.body.email,
       "Bcc": "<jl@johnlea.design>",
-      "TemplateID": 406325,
-      "TemplateLanguage": true,
       "Subject": "Welcome to SafeStamp™!",
+      "Mj-TemplateID": 406325,
+      "Mj-TemplateLanguage": true,
       "Variables": {
           "x.name": req.body.name,
           "x.reason": req.body.drop2,
