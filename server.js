@@ -46,10 +46,18 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
     .request({
       "FromEmail": "Matt@SafeStamp.com",
       "FromName": "Matt McGuire",
-      "Subject": "Thank You For Contacting SafeStamp™!",
-      "Text-part": "Thanks so much for reaching out, " + req.body.name + ". I'll be contacting you as soon as I can regarding your " + req.body.drop2 + " request.",
       "To": req.body.email,
-      "Bcc": "<jl@johnlea.design>"
+      "Bcc": "<jl@johnlea.design>",
+      "TemplateID": 406325,
+      "TemplateLanguage": true,
+      "Subject": "Welcome to SafeStamp™!",
+      "Variables": {
+          "x.name": req.body.name,
+          "x.reason": req.body.drop2,
+          "x.affiliation": req.body.drop,
+          "x.phone": req.body.phone,
+          "x.origin": req.body.drop3
+      }
       })
     .then(response => {
       res.json({
@@ -79,5 +87,5 @@ app.use(function (req, res, next) {
 
 // HTTP listener
 app.listen(process.env.PORT || 8080);
-
+console.log('Listening on' + process.env.PORT);
 module.exports = app;

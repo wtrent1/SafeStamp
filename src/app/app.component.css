@@ -13,11 +13,11 @@ nav.navbar.is-transparent {
     background-image: url(../assets/silica.png);
     background-repeat: no-repeat;
     background-size: 70px;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: lighten;
     background-position: center;
-    opacity: .65 !important;
   }
 }
-
 /*Hide in Other Small Devices */
 
 /* Landscape tablets and medium desktops */
