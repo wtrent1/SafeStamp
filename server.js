@@ -29,15 +29,6 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
   // TODO: get message from req.body
   const request = Mailjet
     .connect(process.env.PUBLIC_KEY, process.env.PRIVATE_KEY)
-    // .post("send")
-    // .request({
-    //   "FromEmail": "Matt@SafeStamp.com",
-    //   "FromName": "Matt McGuire",
-    //   "Subject": "Thank You For Contacting SafeStamp™!",
-    //   "Text-part": "Thanks so much for reaching out, " + req.body.name + ". I'll be contacting you as soon as I can regarding your " + req.body.drop2 + " request.",
-    //   "To": req.body.email,
-    //   "Bcc": "<jl@johnlea.design>"
-    // })
     .post("send")
     .request({
       "FromEmail": "Matt@SafeStamp.com",
@@ -45,9 +36,6 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
       "Subject": "Thank You For Contacting SafeStamp™!",
       "Mj-TemplateID": "406325",
       "Mj-TemplateLanguage": "true",
-      "TemplateErrorReporting": [{
-        "Email": "j.r.lea83@gmail.com",
-      }],
       "Recipients": [{
         "Email": req.body.email
       }],
