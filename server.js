@@ -52,12 +52,12 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
         "Email": req.body.email
       }],
       "Vars": {
-        "name": "Blank",
-        "reason": "Blank",
-        "affiliation": "Blank",
-        "email": "Blank",
-        "phone": "Blank",
-        "origin": "Blank"
+        "name": req.body.name,
+        "reason": req.body.drop2,
+        "affiliation": req.body.drop,
+        "email": req.body.email,
+        "phone": req.body.phone,
+        "origin": req.body.drop3
       }
       })
     .then(response => {
