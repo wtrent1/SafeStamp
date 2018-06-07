@@ -36,9 +36,10 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
       "Subject": "Thank You For Contacting SafeStamp™!",
       "Mj-TemplateID": "406325",
       "Mj-TemplateLanguage": "true",
-      "Recipients": [{
-        "Email": req.body.email
-      }],
+      "Recipients": [
+        {"Email":req.body.email, "Name":req.body.name},
+        {"Email":"Matt@SafeStamp.com", "Name":"Matt McGuire"}
+      ],
       "Vars": {
         "name": req.body.name,
         "reason": req.body.drop2,
