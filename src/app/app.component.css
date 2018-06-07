@@ -1,29 +1,20 @@
 nav.navbar.is-transparent {
   height: 4rem !important;
+  width: 100%;
 }
-
+#logoLabel {
+  font-size: x-large;
+}
 .navbar-item img {
   max-height: 3.40rem;
 }
-
-.navbar-start {
-  margin-left: 11rem;
-  opacity: .65 !important;
-}
-.navbar-end {
-  margin-left: 2rem;
-}
-
-.navbar-item {
-  margin-right: 10em;
-}
-
 @media (min-width: 1200px) {
   #navLink {
     background-image: url(../assets/silica.png);
     background-repeat: no-repeat;
     background-size: 70px;
     background-position: center;
+    opacity: .65 !important;
   }
 }
 
@@ -60,14 +51,12 @@ nav.navbar.is-transparent {
     background-image: none;
   }
 }
-
 .linkText {
   color: black;
   font-size: x-large;
   font-weight: 900;
   text-shadow: 2px 2px white;
 }
-
 footer.footer {
   background-color: white;
   padding: 0rem 1.5rem 1rem;

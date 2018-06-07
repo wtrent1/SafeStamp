@@ -21,13 +21,16 @@ export class ContactComponent implements OnInit {
     const emailBody = {drop, drop2, name, email, phone, drop3};
     console.log(emailBody);
     this.emailService.sendEmail(emailBody).subscribe(
-      // error => {
-      //   console.error('Error Sending Email');
-      //   return throwError(error);
-      // })
+
       success => {
         console.log(success);
         alert('Email Sent!');
+        drop.value = '';
+        drop2.value = '';
+        name.value = '';
+        email.value = '';
+        phone.value = '';
+        drop3.value = '';
       });
   }
 }

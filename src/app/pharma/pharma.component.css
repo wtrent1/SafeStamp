@@ -28,3 +28,15 @@ article {
   font-weight: 400;
   font-size: x-large;
 }
+@media (max-width:480px) {
+  #cdBox {
+    display: flex;
+    flex-flow: column;
+  }
+  #C {
+    order: 2;
+  }
+  #D {
+    order: 1;
+  }
+}
