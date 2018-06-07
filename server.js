@@ -50,7 +50,15 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
       }],
       "Recipients": [{
         "Email": req.body.email
-      }]
+      }],
+      "Vars": {
+        "name": "Blank",
+        "reason": "Blank",
+        "affiliation": "Blank",
+        "email": "Blank",
+        "phone": "Blank",
+        "origin": "Blank"
+      }
       })
     .then(response => {
       res.json({
