@@ -70,8 +70,6 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
 app.use(function (req, res, next) {
   let err = new Error('Not Found');
   err.status = 404;
-  res.sendFile(path.join(__dirname, '/dist/SafeStamp-Final/index.html'));
-  next(err);
 });
 // HTTP listener
 app.listen(process.env.PORT || 8080);
