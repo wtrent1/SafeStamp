@@ -42,23 +42,31 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
   // TODO: get message from req.body
   const request = Mailjet
     .connect(process.env.PUBLIC_KEY, process.env.PRIVATE_KEY)
-    .post("send")
+    .post("send", {'version': 'v3.1'})
     .request({
-      "FromEmail": "Matt@SafeStamp.com",
-      "FromName": "Matt McGuire",
-      "To": req.body.email,
-      "Bcc": "<jl@johnlea.design>",
+      "Messages":[
+        {
+          "From": {
+            "Email": "Matt@SafeStamp.com",
+            "Name": "Matt McGuire"
+          },
+          "To": [
+            {
+            "Email": req.body.email,
+            "Name": req.body.name
+            }
+          ],
       "Subject": "Welcome to SafeStamp™!",
-      "Mj-TemplateID": 406325,
-      "Mj-TemplateLanguage": true,
+      "TemplateID": 406325,
+      "TemplateLanguage": true,
       "Variables": {
-          "x.name": req.body.name,
-          "x.reason": req.body.drop2,
-          "x.affiliation": req.body.drop,
-          "x.phone": req.body.phone,
-          "x.origin": req.body.drop3
+          "name": req.body.name,
+          "reason": req.body.drop2,
+          "affiliation": req.body.drop,
+          "phone": req.body.phone,
+          "origin": req.body.drop3
       }
-      })
+      }]
     .then(response => {
       res.json({
         success: true,
@@ -74,7 +82,8 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
         success: false,
         error: 'Server error'
       });
-    });
+    })
+  });
 });
 
 
