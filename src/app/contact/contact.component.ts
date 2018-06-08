@@ -24,6 +24,7 @@ export class ContactComponent implements OnInit {
 
       success => {
         console.log(success);
+        window.location.reload();
         alert('Email Sent!');
       });
   }
