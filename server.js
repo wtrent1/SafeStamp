@@ -68,9 +68,9 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
 });
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  let err = new Error('Not Found');
-  err.status = 404;
+  res.sendFile(path.join(__dirname, '/dist/SafeStamp-Final/index.html'));
 });
+
 // HTTP listener
 app.listen(process.env.PORT || 8080);
 console.log('Listening on' + process.env.PORT);
