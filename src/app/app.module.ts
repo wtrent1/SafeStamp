@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HowitworksComponent } from './howitworks/howitworks.component';
 import { PharmaComponent } from './pharma/pharma.component';
+import { StoryComponent } from './story/story.component';
 import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     HowitworksComponent,
     PharmaComponent,
+    StoryComponent,
     ContactComponent,
   ],
   imports: [
