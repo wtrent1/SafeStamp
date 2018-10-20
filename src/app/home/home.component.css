@@ -5,6 +5,7 @@
     background-position-y: 3px;
 }
 h1.title.has-text-white {
+    color: #34495E;
     font-size: 2.9rem;
 }
 h2.subtitle.has-text-white {

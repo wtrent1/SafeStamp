@@ -73,5 +73,5 @@ app.use(function (req, res, next) {
 
 // HTTP listener
 app.listen(process.env.PORT || 8080);
-console.log('Listening on' + process.env.PORT);
+console.log('Listening on ' + process.env.PORT);
 module.exports = app;
