@@ -22,3 +22,14 @@ h1.title {
 #contInst span {
   font-size: xx-large;
 }
+.message {
+  background-color: white;
+  text-align: center;
+}
+.button {
+  background-color: #49a59d;
+}
+.button:hover {
+  background-color:#3a8f88;
+}
+
