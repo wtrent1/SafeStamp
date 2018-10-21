@@ -12,7 +12,7 @@ h1.title.has-text-white {
 }
 .salesTitle, .wrongTitle, .numbersTitle {
   font-weight: 900;
-  font-size: xx-large;
+  font-size: 50px;
 }
 .salesText, .wrongText, .numbersText {
   font-weight: 800;
