@@ -15,7 +15,8 @@ a.button.is-rounded {
     background: #49a59d;
 }
 h1.about.has-text-weight-bold, 
-  .why.has-text-weight-bold {
+  .why.has-text-weight-bold,
+  .awards.has-text-weight-bold {
     font-size: x-large;
     }
   .tech.has-text-weight-bold,
@@ -26,8 +27,22 @@ h1.about.has-text-weight-bold,
     }
 #propHero {
     background-color: #49a59d;
-
-}
+    }
 #propTitle, #propSub {
     text-shadow: 1.5px 1.5px gray;
+    }
+.section {
+    margin-top:25px;
+    }
+.colored-icon {
+    color:#49a59d;
+    }
+.icon-setup {
+    margin-top:30px;
+    }
+.awards {
+    margin-bottom: 10px;
+}
+.image-grid {
+    margin-bottom: 30px;
 }

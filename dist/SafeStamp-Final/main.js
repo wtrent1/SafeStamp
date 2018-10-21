@@ -230,7 +230,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#topHero {\n  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('howPageLab.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.investment {\n  margin-top: -11em;\n  background-color: white;\n  border-top: 10px solid #12a89d;\n}\nh1.title {\n  color: #12a89d;\n}\n.subText {\n  font-size: large;\n  font-weight: 400;\n}\n.founder {\n  font-size: x-large;\n}\n#contInst span {\n  font-size: xx-large;\n}\n"
+module.exports = "#topHero {\n  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('howPageLab.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.investment {\n  margin-top: -11em;\n  background-color: white;\n  border-top: 10px solid #49a59d;\n}\nh1.title {\n  color: #49a59d;\n}\n.subText {\n  font-size: large;\n  font-weight: 400;\n}\n.founder {\n  font-size: x-large;\n}\n#contInst span {\n  font-size: xx-large;\n}\n"
 
 /***/ }),
 
@@ -417,7 +417,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#topHero {\n  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('howPageLab.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.interpol {\n  margin-top: -11em;\n  background-color: white;\n  border-top: 10px solid #12a89d;\n}\nh1.title {\n  color: #12a89d;\n}\nh1.how {\n  color: #12a89d;\n  font-size: xx-large;\n  font-weight: 900;\n}\nh1.breathe, h1.touch, h1.relax {\n  font-size: x-large;\n  font-weight: 800;\n  color: #12a89d;\n}\ndiv.column p {\n  font-size: large;\n}\n.titleWhy {\n  font-size: xx-large;\n  font-weight: 900;\n}\n.whyText {\n  font-size: x-large;\n}"
+module.exports = "#topHero {\n  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('howPageLab.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n.interpol {\n  margin-top: -11em;\n  background-color: white;\n  border-top: 10px solid #49a59d;\n}\nh1.title {\n  color: #49a59d;\n}\nh1.how {\n  color: #49a59d;\n  font-size: xx-large;\n  font-weight: 900;\n}\nh1.breathe, h1.touch, h1.relax {\n  font-size: x-large;\n  font-weight: 800;\n  color: #49a59d;\n}\ndiv.column p {\n  font-size: large;\n}\n.titleWhy {\n  font-size: xx-large;\n  font-weight: 900;\n}\n.whyText {\n  font-size: x-large;\n}"
 
 /***/ }),
 
@@ -480,7 +480,7 @@ var HowitworksComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#topHero {\n  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('headerPharmaPic.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n}\nh1.title.has-text-white {\n  font-size: xx-large;\n  font-weight: 900;\n}\n.image {\n  position: static;\n}\n.salesTitle, .wrongTitle, .numbersTitle {\n  font-weight: 900;\n  font-size: xx-large;\n}\n.salesText, .wrongText, .numbersText {\n  font-weight: 800;\n  font-size: x-large;\n}\narticle {\n  background-color: white;\n}\n.hero {\n  background-color: #12a89d;\n}\n.hero h2 {\n  font-weight: 400;\n  font-size: x-large;\n}\n@media (max-width:480px) {\n  #cdBox {\n    display: flex;\n    flex-flow: column;\n  }\n  #C {\n    order: 2;\n  }\n  #D {\n    order: 1;\n  }\n}\n"
+module.exports = "#topHero {\n  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('headerPharmaPic.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n}\nh1.title.has-text-white {\n  font-size: xx-large;\n  font-weight: 900;\n}\n.image {\n  position: static;\n}\n.salesTitle, .wrongTitle, .numbersTitle {\n  font-weight: 900;\n  font-size: xx-large;\n}\n.salesText, .wrongText, .numbersText {\n  font-weight: 800;\n  font-size: x-large;\n}\narticle {\n  background-color: white;\n}\n.hero {\n  background-color: #49a59d;\n}\n.hero h2 {\n  font-weight: 400;\n  font-size: x-large;\n}\n@media (max-width:480px) {\n  #cdBox {\n    display: flex;\n    flex-flow: column;\n  }\n  #C {\n    order: 2;\n  }\n  #D {\n    order: 1;\n  }\n}\n"
 
 /***/ }),
 

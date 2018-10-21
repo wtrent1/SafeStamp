@@ -1,25 +1,20 @@
-#topHero {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/howPageLab.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
   .interpol {
     margin-top: -11em;
     background-color: white;
-    border-top: 10px solid #12a89d;
+    border-top: 10px solid #49a59d;
   }
   h1.title {
-    color: #12a89d;
+    color: #49a59d;
   }
   h1.how {
-    color: #12a89d;
+    color: #49a59d;
     font-size: xx-large;
     font-weight: 900;
   }
   h1.breathe, h1.touch, h1.relax {
     font-size: x-large;
     font-weight: 800;
-    color: #12a89d;
+    color: #49a59d;
   }
   div.column p {
     font-size: large;

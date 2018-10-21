@@ -26,13 +26,10 @@
               <span class="linkText">PHARMA</span>
             </a>
             <a id="navLink" class="navbar-item" routerLink="story">
-                <span class="linkText">TESTIMONIALS</span>
+                <span class="linkText">STORIES</span>
             </a>
       <div class="navbar-item">
-            <a class="button is-medium is-primary" routerLink="contact">
-              <span class="icon">
-                <i class="fas fa-dollar-sign"></i>
-              </span>
+            <a class="button is-medium is-primary nav-btn" routerLink="contact">
               <span>Get A Quote</span>
             </a>
       </div>
@@ -44,15 +41,24 @@
   <router-outlet></router-outlet>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        COPYRIGHT © 2018 LAVOISIER LLC | ALL RIGHTS RESERVED
-      </p>
-      <a routerLink="https://bulma.io">
-        <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
-      </a>
+<footer id=propHero class="footer hero is-info is-small">
+  <div class="hero-body">
+    <div id="propReq" class="container has-text-centered">
+      <div class="has-text-centered">
+        <h2 class="subtitle" id="propSub">
+          PROTECT YOUR CUSTOMERS BOOST YOUR REVENUES
+        </h2>
+      <a routerLink="contact" class="button is-large is-outlined is-light">
+      Request a Proposal</a>
+</div>
     </div>
+      <div class="par-footer content has-text-centered">
+        <p>
+          COPYRIGHT © 2018 LAVOISIER LLC | ALL RIGHTS RESERVED
+        </p>
+        <a routerLink="https://bulma.io">
+          <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+        </a>
+      </div>
   </div>
 </footer>
