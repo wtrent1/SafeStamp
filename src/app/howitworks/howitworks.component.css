@@ -12,7 +12,6 @@ h1.title {
   color: #49a59d;
 }
 h1.how {
-  color: #49a59d;
   font-size: xx-large;
   font-weight: 900;
 }
@@ -31,6 +30,9 @@ div.column p {
 .whyText {
   font-size: x-large;
 }
-.logo {
+.logo, .comment {
   text-align: center;
+}
+.why {
+  padding-top: 10px;
 }
