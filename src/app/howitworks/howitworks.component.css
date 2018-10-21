@@ -24,7 +24,7 @@ h1.breathe, h1.touch, h1.relax {
 div.column p {
   font-size: large;
 }
-.titleWhy {
+.titleWhy, .comment {
   font-size: xx-large;
   font-weight: 900;
 }
