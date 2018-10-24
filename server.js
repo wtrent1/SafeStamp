@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/dist/SafeStamp-Final'));
 app.use(bodyParser.json()); // support json encoded bodies
 
 var corsOptions = {
-  origin: 'http://localhost:4200',
+  origin: 'https://www.safestamp.com',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
