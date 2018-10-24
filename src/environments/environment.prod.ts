@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  edgeUrl: 'www.safestamp.com'
+  edgeUrl: 'https://safestamp.herokuapp.com'
 };
