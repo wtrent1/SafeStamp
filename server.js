@@ -33,7 +33,7 @@ app.post('/api/email', cors(corsOptions), function (req, res) {
     .request({
       "FromEmail": "Matt@SafeStamp.com",
       "FromName": "Matt McGuire",
-      "Subject": "Thank You For Contacting SafeStamp<sup>®</sup>!",
+      "Subject": "Thank You For Contacting SafeStamp®!",
       "Mj-TemplateID": "406325",
       "Mj-TemplateLanguage": "true",
       "Recipients": [
